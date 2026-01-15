@@ -1,24 +1,5 @@
-# README
+# CH - Collaboratio Helvetica - Interactive Demo App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A real-time collaborative demo where audience members control a visual animation via their phones. One screen displays the animation (`/show`), while multiple users interact via a touch interface on their phones (`/interact`). A lobby page (`/start`) displays a QR code for easy mobile access.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Each user sees a coordinate system on their mobile phone once connected on the `/interact` and steers two parameters of the animation, not knowning which. The coordinates are sent over a websocket, collected, stored in an inmemory store and pushed to the `/show` page.
