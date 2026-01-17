@@ -1,0 +1,24 @@
+<div class="min-h-screen bg-black text-white flex flex-col items-center justify-center p-8"
+     data-controller="start">
+
+  <h1 class="text-4xl font-bold mb-8">Collaboratio Helvetica</h1>
+
+  <div class="bg-white p-4 rounded-xl mb-6">
+    <%= @qr_code.as_svg(
+      color: "000",
+      shape_rendering: "crispEdges",
+      module_size: 6,
+      standalone: true,
+      use_path: true
+    ).html_safe %>
+  </div>
+
+  <p class="text-zinc-400 text-sm mb-8 font-mono"><%= @interact_url %></p>
+
+  <p class="text-5xl font-bold mb-8">
+    <span data-start-target="count">0</span> connected
+  </p>
+
+  <%= link_to "Start", "/show",
+      class: "bg-green-500 hover:bg-green-600 text-white text-xl font-bold py-4 px-12 rounded-lg transition-colors" %>
+</div>

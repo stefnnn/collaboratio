@@ -1,0 +1,19 @@
+<div class="fixed inset-0 bg-black touch-none select-none"
+     data-controller="interact">
+
+  <svg class="w-full h-full" data-interact-target="svg">
+    <!-- X axis -->
+    <line data-interact-target="xAxis" class="stroke-zinc-700" stroke-width="1" />
+    <!-- Y axis -->
+    <line data-interact-target="yAxis" class="stroke-zinc-700" stroke-width="1" />
+
+    <!-- Tick marks will be generated dynamically -->
+    <g data-interact-target="ticks"></g>
+
+    <!-- The draggable dot -->
+    <circle data-interact-target="dot"
+            r="20"
+            class="fill-green-500 cursor-grab"
+            style="filter: drop-shadow(0 0 20px rgba(34, 197, 94, 0.5)) drop-shadow(0 0 40px rgba(34, 197, 94, 0.3));" />
+  </svg>
+</div>

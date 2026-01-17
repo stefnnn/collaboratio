@@ -1,0 +1,8 @@
+development:
+  base_url: "http://localhost:3333"
+
+test:
+  base_url: "http://localhost:3333"
+
+production:
+  base_url: "https://your-production-url.com"
